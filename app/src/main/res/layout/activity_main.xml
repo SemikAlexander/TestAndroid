@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/main_picture"
+        android:layout_width="172dp"
+        android:layout_height="172dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_taxi"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="129dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="59dp"
+        android:layout_marginLeft="59dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto"
+        android:textSize="10sp"
+        android:text="Ознакомьтесь с договором-оферты. Регистрируясь или авторизуясь, вы принимаете его условия"/>
+
+    <LinearLayout
+        android:id="@+id/telephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_below="@id/main_picture"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="+7"
+            android:layout_marginRight="29dp"
+            android:layout_marginLeft="19dp"/>
+
+        <com.santalu.maskara.widget.MaskEditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_picture"
+            android:layout_centerHorizontal="true"
+            android:inputType="number"
+            app:mask="___ ___-__-__"
+            app:maskCharacter="_"
+            android:hint="Введите номер вашего телефона"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            app:maskStyle="completable"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/telephone"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginRight="31dp"
+        android:background="@color/telephone_view"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continue_button"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="53dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="@font/roboto"
+        android:gravity="center_vertical"
+        android:text="Продолжить"
+        android:textAlignment="center"
+        android:textColor="@color/background"
+        tools:ignore="RtlCompat" />
+
+</RelativeLayout>
