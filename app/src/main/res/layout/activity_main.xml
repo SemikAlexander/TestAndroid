@@ -57,19 +57,17 @@
             android:id="@+id/editTextPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/main_picture"
-            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto"
+            android:hint="Введите номер вашего телефона"
             android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
             app:mask="___ ___-__-__"
             app:maskCharacter="_"
-            android:hint="Введите номер вашего телефона"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            android:fontFamily="@font/roboto"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:background="@android:color/transparent"
-            app:maskStyle="completable"/>
+            app:maskStyle="completable" />
 
     </LinearLayout>
 

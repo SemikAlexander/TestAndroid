@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Pult Taxi</string>
+    <string name="edittext_hint"><font size="12">Введите номер вашего телефона</font></string>
 </resources>
