@@ -99,7 +99,7 @@
         android:textSize="14sp"
         android:text="Повторно отправить СМС с кодом можно будет через 15 секунд"
         tools:ignore="RtlCompat"
-        android:visibility="invisible" />
+        android:visibility="visible" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/continue_button"

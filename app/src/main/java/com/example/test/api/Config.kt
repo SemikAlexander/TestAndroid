@@ -1,13 +1,13 @@
 package com.example.test.api
 
-import com.example.test.BuildConfig
+import androidx.viewbinding.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-val retrofit by lazy {
+val retrofit: Retrofit by lazy {
     //logs
     val interceptor = HttpLoggingInterceptor()
     interceptor.level =

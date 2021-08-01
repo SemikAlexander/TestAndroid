@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
+    var numTelephone = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,10 +25,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.apply {
             continueButton.setOnClickListener {
-                var numTelephone = editTextPhone.text.toString().replace("-", "")
+                numTelephone = editTextPhone.text.toString().replace("-", "")
                 numTelephone = numTelephone.replace(" ", "")
 
-                codeRequests(numTelephone)
+                codeRequests("7$numTelephone")
             }
         }
     }
@@ -50,7 +51,9 @@ class MainActivity : AppCompatActivity() {
     private fun dataLoaded(status: Status?) {
         if (status != null) {
             when (status.status){
-                "success" -> startActivity<CodeActivity>()
+                "success" -> startActivity<CodeActivity> {
+                    putExtra("telephone", numTelephone)
+                }
                 else -> toast("Возникли проблемы с отправкой кода!")
             }
         }

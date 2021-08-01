@@ -22,8 +22,8 @@ interface API {
 
     @POST("authenticateClients")
     fun authenticateClients(
-        @Query("phone_number") phoneNumber: Int,
-        @Query("password") password: Int
+        @Query("phone_number") phoneNumber: String,
+        @Query("password") password: String
     ): Call<Auth>
 
     companion object {
